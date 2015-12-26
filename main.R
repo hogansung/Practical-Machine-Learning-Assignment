@@ -81,6 +81,7 @@ print(c('sn predict sn: ', acc))
 va_p = predict(rf_model, va_x)
 acc = sum(va_p == va_y) / length(va_y)
 print(c('sn predict va: ', acc))
+## the out of sample error is 0.0039495477130839785 
 
 ## results for train and test
 rf_model = randomForest(x=tn_x, y=tn_y)
@@ -90,8 +91,9 @@ print(c('tn predict tn: ', acc))
 tt_p = predict(rf_model, tt_x)
 
 ## Note: I omit cross-validation process in this project.
-## Based on my past contest experience, 0.99 random validation 
-## accuracy is stable, and I am certain C.V. is unneccessay here.
+## The reason is that: based on my past contest experience, 0.99 
+## random validation accuracy is stable, and I am certain cross-
+## validation is unneccessay here.
 
 ## write out results to file
 pml_write_files = function(x) {

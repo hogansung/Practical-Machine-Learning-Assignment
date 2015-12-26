@@ -155,7 +155,8 @@ acc = sum(sn_p == sn_y) / length(sn_y)
 print(c('sn predict sn: ', acc))
 va_p = predict(rf_model, va_x)
 acc = sum(va_p == va_y) / length(va_y)
-print(c('sn predict va: ', acc))</code></pre>
+print(c('sn predict va: ', acc))
+## the out of sample error is 0.0039495477130839785</code></pre>
 </div>
 <div id="calculate-results-for-train-and-test" class="section level3">
 <h3>Calculate results for train and test</h3>
@@ -163,8 +164,9 @@ print(c('sn predict va: ', acc))</code></pre>
 </div>
 <div id="note-i-omit-cross-validation-process-in-this-project." class="section level3">
 <h3>Note: I omit cross-validation process in this project.</h3>
-<pre class="r"><code># Based on my past contest experience, 0.99 random validation 
-# accuracy is stable, and I am certain C.V. is unneccessay here.</code></pre>
+<pre class="r"><code># The reason is that: based on my past contest experience, 0.99 
+# random validation accuracy is stable, and I am certain cross-
+# validation is unneccessay here.</code></pre>
 </div>
 <div id="write-out-results-into-file" class="section level3">
 <h3>Write out results into file</h3>
